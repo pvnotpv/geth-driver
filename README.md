@@ -18,7 +18,7 @@ For those wanting to understand how the consensus client controls the execution 
 
 After building this project and finally getting the chain running, I came across a deep issue: transactions are not being executed! I mean, what...? The blocks are being built up.
 and chain moving forward, but the transactions are stuck. I started debugging the whole thing, and it was due to the "EIP-1559 dynamic fees" limitations, where the miner tip goes so
-low to a point where transactions will always be in a pending state or just removed. 
+low to a point where transactions will always be in a pending state or just removed since 99% blocks produced are just empty.
 
 So this project requires a patched version of geth :/ If you wanna execute transactions, I mean you need to patch geth before using it.
 
